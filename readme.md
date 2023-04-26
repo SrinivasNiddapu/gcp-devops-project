@@ -7,3 +7,9 @@ GitHub Repository DevOps best practiece:
 2. Enable Branch protection
 
 Develop code locally and test it.
+
+
+# Docker flask application
+
+- This application is written in python
+- it shall be deployed on GKE
