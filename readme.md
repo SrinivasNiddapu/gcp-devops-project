@@ -12,4 +12,5 @@ Develop code locally and test it.
 # Docker flask application
 
 - This application is written in python
+    
 - it shall be deployed on GKE
