@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gcp-devops-gke
+  name: gcp-devops-development-pod
 spec:
   replicas: 1
   selector:
@@ -13,8 +13,8 @@ spec:
         app: gcp
     spec:
       containers:
-      - name: gcp-devops-gke
-        image: gcr.io/nsgks-385010/nsgks:latest
+      - name: gcp-devops-development-cont
+        image: gcr.io/nsgks-385010/gcp-devops-development
         ports:
         - containerPort: 5000
         env:
@@ -24,8 +24,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: "gcp-devops-gke-service"
-  namespace: "gcp-devops-prod"
+  name: "gcp-devops-development-service"
+  namespace: "gcp-devops-development"
   labels:
     app.kubernetes.io/managed-by: "gcp-cloud-build-deploy"
 spec:
